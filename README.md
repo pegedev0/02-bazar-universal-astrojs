@@ -1,4 +1,4 @@
-# Bazar Universal - pegedev0
+# Bazar Universal 🛒
 
 ### Información del proyecto
 Este proyecto es una solución a una prueba técnica. Consiste en crear un bazar online dado un conjunto de productos.
