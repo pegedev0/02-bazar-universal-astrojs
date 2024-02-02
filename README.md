@@ -13,4 +13,4 @@ La web ha sido desarrollada con el framework **[Astro](https://astro.build/)**, 
 ---
 
 ### Web de la prueba técnica
-(https://github.com/midudev/pruebas-tecnicas/tree/main/pruebas/02-bazar-universal)
+https://github.com/midudev/pruebas-tecnicas/tree/main/pruebas/02-bazar-universal
