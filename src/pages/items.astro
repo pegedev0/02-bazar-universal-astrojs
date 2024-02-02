@@ -5,9 +5,12 @@ import Products from "../components/Products.astro"
 import NoResults from "../components/NoResults.astro"
 import CategoriesCount from "../components/CategoriesCount.astro"
 
-const key = Astro.url.toString().split("=")[1].toLocaleLowerCase()
+const key = Astro.url && Astro.url.toString().split("=")[1] ? Astro.url.toString().split("=")[1].toLowerCase() : '';
 
-const filteredProducts = products.filter(product => product.category.toLowerCase().includes(key) || product.title.toLowerCase().includes(key))
+const filteredProducts = key
+  ? products.filter(product => product.category.toLowerCase().includes(key) || product.title.toLowerCase().includes(key))
+  : [];
+
 const numberOfProducts = filteredProducts.length
 ---
 
