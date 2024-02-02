@@ -7,8 +7,11 @@ El diseño sigue los patrones que se solicitan en la web que plantea la prueba t
 
 La web ha sido desarrollada con el framework **[Astro](https://astro.build/)**, usando además **[React](https://es.react.dev/)** y **[TailwindCSS](https://tailwindcss.com/)**.
 
+---
+
 ### Web del proyecto
 
+---
 
 ### Web de la prueba técnica
 (https://github.com/midudev/pruebas-tecnicas/tree/main/pruebas/02-bazar-universal)
