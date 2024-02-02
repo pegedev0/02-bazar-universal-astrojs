@@ -1,0 +1,22 @@
+---
+import { Image } from "astro:assets"
+import truckImage from '/public/truck.webp'
+import SearchForm from "./SearchForm"
+
+const key = Astro.url.toString().split("=")[1]
+---
+
+<header class="flex justify-between mx-5 md:mx-20 my-5 pb-3">
+    <a href="/">
+        <Image 
+            src={truckImage} 
+            alt="Truck Bazar Universal" 
+            width={80} 
+            height={80} 
+        />
+    </a>
+
+    <div class="my-auto">
+        <SearchForm withBtn={false} customPlaceholder={key} client:visible />
+    </div>
+</header>

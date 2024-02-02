@@ -1,0 +1,25 @@
+---
+import StoreLayout from "../layouts/StoreLayout.astro"
+import { products } from "../json/products.json"
+import Products from "../components/Products.astro"
+import NoResults from "../components/NoResults.astro"
+import CategoriesCount from "../components/CategoriesCount.astro"
+
+const key = Astro.url.toString().split("=")[1].toLocaleLowerCase()
+
+const filteredProducts = products.filter(product => product.category.toLowerCase().includes(key) || product.title.toLowerCase().includes(key))
+const numberOfProducts = filteredProducts.length
+---
+
+<StoreLayout title={`Bazar Universal - ${key}`}>
+    <div class="flex flex-col">
+        <span class="font-bold">Resultados de búsqueda de "{key}": {numberOfProducts}</span>
+        <CategoriesCount products={filteredProducts} />
+    </div>
+
+    {
+        numberOfProducts !== 0
+            ? <Products products={filteredProducts} />
+            : <NoResults />
+    }
+</StoreLayout>

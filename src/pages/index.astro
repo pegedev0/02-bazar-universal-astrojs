@@ -1,0 +1,21 @@
+---
+import { Image } from 'astro:assets';
+import Layout from '../layouts/Layout.astro';
+import SearchForm from '../components/SearchForm'
+import truckImage from '/public/truck.webp';
+---
+
+<Layout title="Bazar Universal">
+	<main class="flex flex-col items-center gap-6">
+		<Image 
+			src={truckImage} 
+			alt="Truck Bazar Universal" 
+			width={200} 
+			height={200} 
+		/>
+
+		<h1 class="text-4xl font-bold">Bazar Online</h1>
+
+		<SearchForm withBtn={true} customPlaceholder="laptops, smartphones, ..." client:visible />
+	</main>
+</Layout>
